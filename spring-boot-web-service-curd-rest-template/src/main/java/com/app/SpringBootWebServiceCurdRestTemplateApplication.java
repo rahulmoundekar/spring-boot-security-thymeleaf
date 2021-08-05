@@ -14,17 +14,16 @@ public class SpringBootWebServiceCurdRestTemplateApplication {
 		SpringApplication.run(SpringBootWebServiceCurdRestTemplateApplication.class, args);
 
 		RestConsumerTest consumerTest = new RestConsumerTest();
-		//consumerTest.getCustomerList();
-		//consumerTest.getCustomer(23);
-		
-		Customer customer=new Customer();
+		// consumerTest.getCustomerList();
+		// consumerTest.getCustomer(23);
+
+		Customer customer = new Customer();
 		customer.setName("Ajinkya");
 		customer.setMobile("9158565604");
 		customer.setAddress("Sambhaji nagar, Kharadi");
-		
-		//consumerTest.createCustomer(customer);
+
+		// consumerTest.createCustomer(customer);
 		consumerTest.deteleCustomer(23);
-		
-		
+
 	}
 }

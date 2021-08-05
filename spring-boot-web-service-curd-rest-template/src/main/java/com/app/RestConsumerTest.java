@@ -1,8 +1,6 @@
 package com.app;
 
 import java.util.Arrays;
-import java.util.Base64;
-
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -54,7 +52,7 @@ public class RestConsumerTest {
 
 	}
 
-	public static HttpEntity addHeaders() {
+	public static HttpEntity<String> addHeaders() {
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(new MediaType[] { MediaType.APPLICATION_JSON }));
 		headers.setContentType(MediaType.APPLICATION_JSON);
