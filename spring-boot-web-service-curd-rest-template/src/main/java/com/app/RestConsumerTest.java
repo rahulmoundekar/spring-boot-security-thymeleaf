@@ -6,7 +6,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
-
 import com.app.entities.Customer;
 
 public class RestConsumerTest {
@@ -16,9 +15,7 @@ public class RestConsumerTest {
 		RestTemplate restTemplate = new RestTemplate();
 		Customer[] customers = restTemplate.exchange(CUSTOMERS_URL, HttpMethod.GET, addHeaders(), Customer[].class)
 				.getBody();
-		for (Customer customer : customers) {
-			System.out.println(customer);
-		}
+		Arrays.asList(customers).forEach(System.out::println);
 	}
 
 	public void getCustomer(Integer id) {
